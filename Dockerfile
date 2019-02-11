@@ -20,7 +20,6 @@ RUN apt-get update && apt-get -y --quiet --force-yes upgrade \
     && menuselect/menuselect --disable-category MENUSELECT_ADDONS menuselect.makeopts \
     && menuselect/menuselect --disable-category MENUSELECT_CEL menuselect.makeopts \
     && menuselect/menuselect --disable-category MENUSELECT_CDR menuselect.makeopts \
-    && menuselect/menuselect --disable-category MENUSELECT_PBX menuselect.makeopts \
     && menuselect/menuselect --disable-category MENUSELECT_OPTS_app_voicemail menuselect.makeopts \
     && menuselect/menuselect --disable chan_mobile menuselect.makeopts \
     && menuselect/menuselect --disable chan_ooh323 menuselect.makeopts \
@@ -68,7 +67,7 @@ RUN apt-get update && apt-get -y --quiet --force-yes upgrade \
     && make && make config install \
     && rm -Rf /usr/local/src/asterisk-16.2.0-rc1* \ 
     && apt-get purge -y --quiet --force-yes  --auto-remove wget automake autoconf libtool libtool-bin build-essential pkg-config node-ws cpp cpp-4.9 \
-    libspeex-dev libspeexdsp-dev libogg-dev libvorbis-dev libasound2-dev portaudio19-dev libcurl4-openssl-dev xmlstarlet bison flex \
+    libasound2-dev portaudio19-dev libcurl4-openssl-dev xmlstarlet bison flex \
     libpq-dev unixodbc-dev libneon27-dev libgmime-2.6-dev liblua5.2-dev libssl-dev \
     libmysqlclient-dev libbluetooth-dev freetds-dev  \
     libsnmp-dev libiksemel-dev libcpg-dev libcfg-dev libnewt-dev libpopt-dev libical-dev libspandsp-dev \
